@@ -1,24 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {Articles} from "./components/Articles";
+
+const date = new Date();
 
 function App() {
+
+  const font = {
+      fontFamily: "monospace",
+      color: "#222"
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1 style={font}> Fun Tech News </h1>
+      <h3 style={font}> click on a news card to read the full article! </h3>
+      <p style={font}> {date.toDateString()} </p>
+      <Articles />
+      <p style={font}> the tech news archive @ 2058 </p>
     </div>
   );
 }
